@@ -1,22 +1,17 @@
-
-
-<h1>Listing articles</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
  
-
-  <ul>
-    <h1>Title</h1>
-    <h1>Text</h1>
- 
-</ul>
   <% @articles.each do |article| %>
-<ul>
-    
-      <%= article.title %>
-      <%= link_to 'article.title', article_path(article) %>
-</ul>
-      <%= article.text %>
-    
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    </tr>
   <% end %>
-
-
+</table>
 <%= link_to 'New article', new_article_path %>
