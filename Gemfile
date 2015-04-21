@@ -25,6 +25,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'cancancan', '~> 1.10'
+
+gem "twitter-bootstrap-rails"
+gem "haml-rails", "~> 0.9"
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -33,8 +38,7 @@ gem 'cancancan', '~> 1.10'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "twitter-bootstrap-rails"
-gem "haml-rails", "~> 0.9"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -44,6 +48,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
+  gem 'rspec'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 

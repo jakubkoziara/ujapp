@@ -29,26 +29,23 @@
     = javascript_include_tag "application"
   %body
     = render "layouts/header"
-    
     .container
       .row
         .col-lg-9
-        
           = bootstrap_flash
-          
           = yield
-          
         .col-lg-3
           .well.sidebar-nav
-            %h3= link_to 'My Blog', articles_path
+            %h3 Sidebar
             %ul.nav.nav-list
               %li.nav-header Sidebar
-              %li= link_to 'New article', new_article_path
+              %li= link_to "Link1", "/path1"
               %li= link_to "Link2", "/path2"
               %li= link_to "Link3", "/path3"
           / /.well
         / /span
       / /row
-      %footer
-        %p © Company 2015
-    / /container
+    %footer.footer
+      .container
+        %p.text-muted Place sticky footer content here.
+      
